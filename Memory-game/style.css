@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(slike/stadion.jpg);
+    background-size: cover;
+}
+
+#grid-container {
+    display: grid;
+    perspective: 1000px;
+    width: 70%;
+    padding-left: 10px;
+}
+
+#tajmer {
+    width: 50px;
+    text-align: center;
+}
+
+.userName {
+    margin-left: 10px;
+    padding: 3px;
+}
+
+.x16 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.x16 .card {
+    height: calc((100vh - 160px) / 4);
+}
+
+.x36 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.x36 .card {
+    height: calc((100vh - 160px) / 6);
+}
+
+.x64 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.x64 .card {
+    height: calc((100vh - 160px) / 8);
+}
+
+.x100 {
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.x100 .card {
+    height: calc((100vh - 160px) / 10);
+}
+
+img {
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    max-width: 100px;
+    height: 150px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.front-face {
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.back-face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.box {
+    display: none;
+}
+
+#rezultati {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.btn {
+    background-color: whitesmoke;
+    padding: 3px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(247, 91, 71);
+}
+
+th,
+tr,
+td {
+    border: 1px solid rgb(19, 11, 10);
+    text-align: center;
+}
+
+@media only screen and (max-width:900px) {
+    #rezultati {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        color: yellow;
+    }
+    #grid-container {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    th,
+    td {
+        width: 50%;
+    }
+    img {
+        max-width: 70px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .btn {
+        width: 48%;
+    }
+    img {
+        max-width: 50px;
+    }
+}

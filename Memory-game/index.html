@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>IGRA MEMORIJE <input type="text" id="tajmer"></h1>
+    <br>
+    <input type="text" class="userName" placeholder="Unesite svoje korisnicko ime..." autofocus>
+    <br><br>
+
+    <input type="radio" name="level" value="lako" checked>Lako
+    <input type="radio" name="level" value="srednje">Srednje
+    <input type="radio" name="level" value="tesko">Tesko
+    <input type="radio" name="level" value="ekspert">Ekspert
+    <br><br>
+
+    <div id="grid-container">
+
+    </div>
+
+    <div id="rezultati">
+        <div>
+            <button id="lako" class="btn">Lako</button>
+            <button id="srednje" class="btn">Srednje</button>
+            <button id="tesko" class="btn">Tesko</button>
+            <button id="ekspert" class="btn">Ekspert</button>
+        </div>
+        <br>
+        <table class="lako box">
+            <thead>
+                <tr>
+                    <th>Mesto</th>
+                    <th>Korisnicko ime</th>
+                    <th>Vreme</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table class="srednje box">
+            <thead>
+                <tr>
+                    <th>Mesto</th>
+                    <th>Korisnicko ime</th>
+                    <th>Vreme</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table class="tesko box">
+            <thead>
+                <tr>
+                    <th>Mesto</th>
+                    <th>Korisnicko ime</th>
+                    <th>Vreme</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table class="ekspert box">
+            <thead>
+                <tr>
+                    <th>Mesto</th>
+                    <th>Korisnicko ime</th>
+                    <th>Vreme</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
